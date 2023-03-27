@@ -1,11 +1,11 @@
 import React from 'react'
-import { Routes, Route, Form } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import { ColorMdoeContext, useMode } from './theme'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
 import TopBar from './scenes/global/Topbar'
-import SideBar from './scenes/global/Sidebar';
+import SideBar from './scenes/global/Sidebar'
 
 import Dashboard from './scenes/dashboard'
 import Team from './scenes/team'
@@ -17,6 +17,7 @@ import Line from './scenes/line'
 import FAQ from './scenes/faq'
 import Calendar from './scenes/calendar'
 import Geography from './scenes/geography'
+import Form from './scenes/form'
 
 function App() {
     const [theme, colorMode] = useMode()
@@ -25,7 +26,7 @@ function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <div className='app'>
-                    <SideBar/>
+                    <SideBar />
                     <main className='content'>
                         <TopBar />
                         <Routes>
