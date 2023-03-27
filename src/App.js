@@ -21,6 +21,7 @@ import Form from './scenes/form'
 
 function App() {
     const [theme, colorMode] = useMode()
+    
     return (
         <ColorMdoeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
