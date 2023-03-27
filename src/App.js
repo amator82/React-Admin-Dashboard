@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { ColorMdoeContext, useMode } from './theme'
+import { ColorModeContext, useMode } from './theme'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
 import TopBar from './scenes/global/Topbar'
@@ -21,9 +21,9 @@ import Form from './scenes/form'
 
 function App() {
     const [theme, colorMode] = useMode()
-    
+
     return (
-        <ColorMdoeContext.Provider value={colorMode}>
+        <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <div className='app'>
@@ -46,7 +46,7 @@ function App() {
                     </main>
                 </div>
             </ThemeProvider>
-        </ColorMdoeContext.Provider>
+        </ColorModeContext.Provider>
     )
 }
 

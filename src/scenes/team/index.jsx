@@ -85,7 +85,7 @@ const Team = () => {
                     '& .MuiDataGrid-cell': {
                         borderBottom: 'none'
                     },
-                    '& .name-column-cell': {
+                    '& .name-column--cell': {
                         color: colors.greenAccent[300]
                     },
                     '& .MuiDataGrid-columnHeaders': {
@@ -98,10 +98,17 @@ const Team = () => {
                     '& .MuiDataGrid-footerContainer': {
                         borderTop: 'none',
                         backgroundColor: colors.blueAccent[700]
+                    },
+                    '& .MuiCheckbox-root': {
+                        color: `${colors.greenAccent[200]} !important`
                     }
                 }}
             >
-                <DataGrid rows={mockDataTeam} columns={columns}></DataGrid>
+                <DataGrid
+                    rows={mockDataTeam}
+                    columns={columns}
+                    checkboxSelection
+                ></DataGrid>
             </Box>
         </Box>
     )

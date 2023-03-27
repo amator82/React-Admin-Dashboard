@@ -70,7 +70,7 @@ const Contacts = () => {
                     '& .MuiDataGrid-cell': {
                         borderBottom: 'none'
                     },
-                    '& .name-column-cell': {
+                    '& .name-column--cell': {
                         color: colors.greenAccent[300]
                     },
                     '& .MuiDataGrid-columnHeaders': {
